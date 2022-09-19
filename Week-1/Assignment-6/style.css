@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  background-color: rgb(248, 209, 138);
+  display: flexbox;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  align-content: space-around;
+}
+.icon {
+  max-width: 40px;
+  position: absolute;
+  width: 50px;
+  height: 20px;
+}
+
+.nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+.right-aligned {
+  float: right;
+}
+
+#web-title {
+  font-size: 20px;
+}
+#welcome-msg {
+  background-color: rgb(247, 236, 216);
+  display: flexbox;
+  padding: 80px 10px;
+  text-align: center;
+  font-size: 40px;
+}
+h2 {
+  background-color: rgb(255, 255, 255);
+  display: flexbox;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+section {
+  max-width: 1200px; /*should be fixed in 1200px*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.container-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+#box-1,
+#box-2,
+#box-3,
+#box-4 {
+  background-color: rgb(205, 131, 47);
+  text-align: center;
+  padding: 100px 200px;
+  flex: 8px 2px;
+  margin: 5px;
+}
+button {
+  background-color: rgb(241, 136, 17);
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
