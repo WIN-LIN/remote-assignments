@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SUM</title>
+  </head>
+  <body>
+    <div>
+      <label>Enter a number:</label>
+      <input type="text" id="number" />
+      <button onclick="calculate()">Calculate</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      function calculate() {
+        var xhr = new XMLHttpRequest();
+        var number = document.getElementById("number").value;
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              document.getElementById("result").innerHTML = xhr.responseText;
+              //console.log(`ResponseText: ${xhr.responseText}`);
+            }
+          }
+        };
+        xhr.open("GET", "/data?number=" + number);
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
